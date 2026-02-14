@@ -12,7 +12,7 @@ Reference: [IDEA_SUBMISSION.md](IDEA_SUBMISSION.md) (MediVault GenAI Idea Submis
 
 ## Problem Statement
 
-Patients and caregivers struggle to get a clear, unified view of their health. Medical records are scattered across hospitals, labs, and clinics; documents are full of jargon; and there is no single place to ask "what did my doctor say about my condition?" or "summarize my last year of visits." This fragmentation leads to repeated tests, missed follow-ups, and poor continuity of care. In critical emergency situations, immediate access to complete medical history can be life-saving, yet current systems fail to provide this crucial information when it matters most. Additionally, patients often struggle to understand and manage their insurance coverage, missing opportunities for financial relief and optimal care planning.
+Patients and caregivers struggle to get a clear, unified view of their health. Medical records are scattered across hospitals, labs, and clinics; documents are full of jargon; and there is no single place to ask "what did my doctor say about my condition?" or "summarize my last year of visits." This fragmentation leads to repeated tests, missed follow-ups, and poor continuity of care. In critical emergency situations, immediate access to complete medical history can be life-saving, yet current systems fail to provide this crucial information when it matters most.
 
 **Who it impacts:** Patients (especially those with chronic conditions or multiple providers), family caregivers managing a loved one's care, and clinicians who spend excessive time re-reading notes and chasing records. Emergency responders and hospital staff who need instant access to patient history during critical care situations.
 
@@ -25,7 +25,6 @@ Patients and caregivers struggle to get a clear, unified view of their health. M
 - **Rapid medical care:** The need for faster access to medical information to enable rapid decision-making in both routine and emergency situations.
 - **Reduce manual work:** Automate document submission and retrieval processes, eliminating repetitive administrative tasks for patients and healthcare providers.
 - **Emergency document access:** Critical situations require immediate access to medical history and documents, yet current systems create delays that can impact patient outcomes.
-- **Insurance management:** Patients often lack clear visibility into their insurance coverage, missing opportunities for financial relief and optimal care planning.
 - **Opportunity:** Generative AI can turn a vault of documents into an intelligent, queryable health narrative—summarizing visits, translating jargon, and answering questions—while respecting privacy through on-device or private-cloud deployment and no training on user data.
 
 ---
@@ -79,6 +78,7 @@ Patients and caregivers struggle to get a clear, unified view of their health. M
 
 - **Novelty:** Combines (1) a **patient-owned vault** where data stays with the user or tenant, (2) **conversational GenAI over personal medical history** via RAG with citations, and (3) **privacy-by-design** (no training on user data, optional local/private deployment). Emphasis on "my records, my questions, my consent."
 - **Scope to scale:**
-  - **Vertical:** Expand from summaries and Q&A to medication reminders, pre-visit briefs, health notifications, insurance management, doctor/hospital recommendations, community features, and integration with wearables and lab feeds.
+  - **Vertical:** Expand from summaries and Q&A to medication reminders, pre-visit briefs, health notifications, doctor/hospital recommendations, community features, and integration with wearables and lab feeds.
+  - **Insurance (scale):** Insurance details of the person—when present—as a dedicated scalability track: ingest and index policy documents, EOBs, and coverage details; offer GenAI-powered summaries, coverage Q&A, and financial-relief or care-planning insights; integrate with payers and TPAs for eligibility and claims. Scale from single-user vault to family/employer or clinic-level insurance views.
   - **Horizontal:** Same vault + GenAI pattern can extend to clinical use (e.g., clinic-owned vault for a cohort) or consent-based research (aggregated, de-identified insights). Emergency access features can integrate with hospital systems and emergency response networks.
   - **Ecosystem:** Partnerships with EHR vendors, lab networks, health systems, insurance providers, and emergency services for secure document ingestion (OAuth, FHIR) without centralizing raw data. Integration with verified medical professional networks for community features.
