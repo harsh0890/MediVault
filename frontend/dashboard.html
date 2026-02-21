@@ -1,82 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediVault - Dashboard</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <style>
-        .dashboard-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .dashboard-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .dashboard-header h1 {
-            color: #667eea;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .dashboard-content {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .welcome-message {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .logout-btn {
-            background: #dc3545;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
-        }
-
-        .logout-btn:hover {
-            background: #c82333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediVault — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css?v=3">
 </head>
 <body>
-    <div class="dashboard-container">
-        <div class="dashboard-header">
-            <h1>MediVault</h1>
-            <p>Your Personal Health Record Vault</p>
+
+  <div class="blob-wrap" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="dash-page">
+
+    <nav class="dash-nav">
+      <a href="/dashboard" class="dash-nav-logo">
+        <div class="dash-nav-logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="10" y="2" width="4" height="20" rx="2" fill="white"/>
+            <rect x="2" y="10" width="20" height="4" rx="2" fill="white"/>
+          </svg>
         </div>
-        
-        <div class="dashboard-content">
-            <div class="welcome-message">
-                Welcome to MediVault Dashboard!
-            </div>
-            <p style="color: #666; font-size: 16px; margin-bottom: 30px;">
-                This is your dashboard. More features will be added here.
-            </p>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="/chatbot" style="background: #667eea; color: white; padding: 12px 30px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block;">
-                    💬 Ask Medical Assistant
-                </a>
-                <a href="/" class="logout-btn">Logout</a>
-            </div>
+        <span>MediVault</span>
+      </a>
+      <div class="dash-nav-actions">
+        <span class="dash-nav-badge">✦ Health Records Active</span>
+        <a href="/" class="dash-logout-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Logout
+        </a>
+      </div>
+    </nav>
+
+    <main class="dash-main">
+
+      <div class="dash-hero">
+        <div class="dash-hero-text">
+          <div class="dash-hero-greeting" id="greeting">Good morning</div>
+          <h1 class="dash-hero-title">
+            Welcome to your<br><span>Health Command Center</span>
+          </h1>
+          <p class="dash-hero-sub">
+            Your medical records are securely stored and always accessible. Ask your AI assistant anything about your health history.
+          </p>
         </div>
-    </div>
+        <div class="dash-hero-stat">
+          <div class="dash-hero-stat-num">AI</div>
+          <div class="dash-hero-stat-label">Powered by RAG</div>
+        </div>
+      </div>
+
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="stat-icon">📋</div>
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Records Indexed</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">🔒</div>
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Data Encrypted</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-value">~2s</div>
+          <div class="stat-label">Avg. Response Time</div>
+        </div>
+      </div>
+
+      <div class="dash-section-title">Quick Actions</div>
+      <div class="dash-cards">
+
+        <a href="/chatbot" class="dash-card">
+          <div class="dash-card-icon indigo">🤖</div>
+          <div>
+            <div class="dash-card-title">Medical Assistant</div>
+            <div class="dash-card-desc">Ask anything about your health records. Get instant AI-powered insights from your documents.</div>
+            <div class="dash-card-badge">Active</div>
+          </div>
+          <div class="dash-card-arrow">→</div>
+        </a>
+
+        <div class="dash-card disabled">
+          <div class="dash-card-icon cyan">📁</div>
+          <div>
+            <div class="dash-card-title">Health Records</div>
+            <div class="dash-card-desc">Browse, upload and manage your medical documents in one secure place.</div>
+            <div class="dash-card-badge soon">Coming Soon</div>
+          </div>
+          <div class="dash-card-arrow">→</div>
+        </div>
+
+        <div class="dash-card disabled">
+          <div class="dash-card-icon green">📊</div>
+          <div>
+            <div class="dash-card-title">Health Summary</div>
+            <div class="dash-card-desc">View a comprehensive overview of your health trends, medications, and checkup history.</div>
+            <div class="dash-card-badge soon">Coming Soon</div>
+          </div>
+          <div class="dash-card-arrow">→</div>
+        </div>
+
+        <div class="dash-card disabled">
+          <div class="dash-card-icon indigo">🗓️</div>
+          <div>
+            <div class="dash-card-title">Appointments</div>
+            <div class="dash-card-desc">Schedule and track your upcoming doctor visits and receive smart reminders.</div>
+            <div class="dash-card-badge soon">Coming Soon</div>
+          </div>
+          <div class="dash-card-arrow">→</div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      MediVault &nbsp;·&nbsp; Your health data is end-to-end encrypted &nbsp;·&nbsp;
+      <a href="/" style="color:#6366F1;text-decoration:none;">Sign out</a>
+    </footer>
+  </div>
+
+  <script>
+    var h = new Date().getHours();
+    document.getElementById('greeting').textContent =
+      h < 12 ? 'Good morning ☀️' : h < 18 ? 'Good afternoon 👋' : 'Good evening 🌙';
+  </script>
 </body>
 </html>

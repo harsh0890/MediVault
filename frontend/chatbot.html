@@ -1,69 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediVault - Medical Assistant</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/chatbot.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediVault — Medical Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css?v=3">
+  <link rel="stylesheet" href="/static/css/chatbot.css?v=3">
 </head>
 <body>
-    <div class="chatbot-container">
-        <!-- Header -->
-        <div class="chatbot-header">
-            <div class="header-content">
-                <h1>MediVault</h1>
-                <p>Medical Assistant - Ask me anything about your health records</p>
-            </div>
-            <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
-        </div>
 
-        <!-- Chat Messages Area -->
-        <div class="chat-messages" id="chatMessages">
-            <!-- Welcome Message -->
-            <div class="message bot-message">
-                <div class="message-avatar">🤖</div>
-                <div class="message-content">
-                    <div class="message-text">
-                        Hello! I'm your MediVault Medical Assistant. I can help you understand your medical records, answer questions about your health history, and provide insights from your documents.
-                        <br><br>
-                        You can ask me questions like:
-                        <ul style="margin-top: 10px; padding-left: 20px;">
-                            <li>"Summarize my medical records"</li>
-                            <li>"What was my last eye checkup result?"</li>
-                            <li>"What medications am I currently on?"</li>
-                            <li>"Explain my eye prescription"</li>
-                            <li>"What recommendations do you have for me?"</li>
-                        </ul>
-                        <br>
-                        I'll provide answers based on your medical records and also give you both record-based and general health recommendations!
-                    </div>
-                    <div class="message-time">Just now</div>
-                </div>
-            </div>
-        </div>
+  <div class="chatbot-container">
 
-        <!-- Input Area -->
-        <div class="chat-input-container">
-            <div class="chat-input-wrapper">
-                <input 
-                    type="text" 
-                    id="userInput" 
-                    class="chat-input" 
-                    placeholder="Ask me anything about your medical records..."
-                    autocomplete="off"
-                >
-                <button id="sendBtn" class="send-btn">
-                    <span>Send</span>
-                    <span class="send-icon">➤</span>
-                </button>
-            </div>
-            <div class="input-hint">
-                Press Enter to send • Ask questions about your medical records
-            </div>
-        </div>
+    <div class="blob-wrap" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
     </div>
 
-    <script src="/static/js/chatbot.js"></script>
+    <header class="chatbot-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="10" y="2" width="4" height="20" rx="2" fill="white"/>
+            <rect x="2" y="10" width="20" height="4" rx="2" fill="white"/>
+          </svg>
+        </div>
+        <div class="header-content">
+          <h1>MediVault</h1>
+          <p>AI Medical Assistant</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-status">
+          <div class="status-dot"></div>
+          <span>Ready</span>
+        </div>
+        <a href="/dashboard" class="back-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M19 12H5M5 12l7 7M5 12l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Dashboard
+        </a>
+      </div>
+    </header>
+
+    <div class="suggestion-bar">
+      <span class="suggestion-label">Try asking:</span>
+      <button class="chip" onclick="fillInput(this)"><span>📋</span> Summarize my records</button>
+      <button class="chip" onclick="fillInput(this)"><span>💊</span> Current medications</button>
+      <button class="chip" onclick="fillInput(this)"><span>👁️</span> Last eye checkup result</button>
+      <button class="chip" onclick="fillInput(this)"><span>🔬</span> Explain my prescription</button>
+      <button class="chip" onclick="fillInput(this)"><span>💡</span> Health recommendations</button>
+      <button class="chip" onclick="fillInput(this)"><span>📅</span> Recent diagnoses</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot-message">
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          <div class="message-text">
+            Hello! I'm your <strong>MediVault AI Assistant</strong>. I have access to your complete medical records and can help you understand your health history, interpret test results, and answer clinical questions.
+            <br><br>
+            Here's what I can do:
+            <ul>
+              <li>Summarize your medical history</li>
+              <li>Answer questions about past checkups &amp; labs</li>
+              <li>Explain prescriptions and dosage details</li>
+              <li>Provide personalized health recommendations</li>
+            </ul>
+            <div class="welcome-chips">
+              <span class="welcome-chip" onclick="quickSend('Summarize my medical records')">📋 Quick summary</span>
+              <span class="welcome-chip" onclick="quickSend('What medications am I currently on?')">💊 My medications</span>
+              <span class="welcome-chip" onclick="quickSend('What recommendations do you have for me?')">💡 Get advice</span>
+            </div>
+          </div>
+          <div class="message-time">Just now</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-container">
+      <div class="chat-input-wrapper">
+        <input type="text" id="userInput" class="chat-input"
+          placeholder="Ask about your medical records…" autocomplete="off">
+        <button id="sendBtn" class="send-btn" aria-label="Send message">
+          <span>Send</span>
+          <span class="send-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="input-hint">
+        <span>Press Enter to send</span>
+        <span class="input-hint-dot"></span>
+        <span>Powered by your medical documents</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/js/chatbot.js"></script>
+  <script>
+    function fillInput(btn) {
+      var t = btn.textContent.trim().replace(/^[\s\S]*?\s/, '').trim();
+      document.getElementById('userInput').value = t;
+      document.getElementById('userInput').focus();
+    }
+    function quickSend(text) {
+      document.getElementById('userInput').value = text;
+      document.getElementById('sendBtn').click();
+    }
+  </script>
 </body>
 </html>
