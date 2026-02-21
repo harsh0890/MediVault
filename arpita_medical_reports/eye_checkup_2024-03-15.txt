@@ -1,0 +1,181 @@
+================================================================================
+                    EYE CHECKUP REPORT
+================================================================================
+
+Patient Information:
+-------------------
+Name: Arpita
+Date of Birth: [Not Provided]
+Gender: Female
+Patient ID: MED-2024-001
+Date of Examination: March 15, 2024
+Examining Doctor: Dr. Sarah Johnson, MD
+Clinic: Vision Care Center, Department of Ophthalmology
+
+================================================================================
+                    VISUAL ACUITY TEST
+================================================================================
+
+Distance Vision (Snellen Chart):
+--------------------------------
+Right Eye (OD): 20/25
+Left Eye (OS):  20/30
+Both Eyes (OU): 20/25
+
+Near Vision:
+-----------
+Right Eye (OD): N6 (Normal)
+Left Eye (OS):  N8 (Slightly reduced)
+
+================================================================================
+                    REFRACTION TEST
+================================================================================
+
+Current Prescription:
+-------------------
+Right Eye (OD): -1.50 D (Sphere), -0.75 D (Cylinder) @ 90° (Axis)
+Left Eye (OS):  -2.00 D (Sphere), -0.50 D (Cylinder) @ 180° (Axis)
+
+Previous Prescription (6 months ago):
+------------------------------------
+Right Eye (OD): -1.25 D (Sphere), -0.50 D (Cylinder) @ 90° (Axis)
+Left Eye (OS):  -1.75 D (Sphere), -0.50 D (Cylinder) @ 180° (Axis)
+
+Change: Slight increase in myopia in both eyes
+
+================================================================================
+                    INTRAOCULAR PRESSURE (IOP)
+================================================================================
+
+Right Eye (OD): 14 mmHg (Normal range: 10-21 mmHg)
+Left Eye (OS):  16 mmHg (Normal range: 10-21 mmHg)
+
+Status: Within normal limits
+
+================================================================================
+                    SLIT LAMP EXAMINATION
+================================================================================
+
+Anterior Segment:
+---------------
+- Cornea: Clear, no abnormalities detected
+- Iris: Normal color and structure
+- Pupil: Round, reactive to light, equal in size
+- Lens: Clear, no cataracts observed
+- Conjunctiva: Mild dryness noted, no inflammation
+
+================================================================================
+                    FUNDUS EXAMINATION (Retina)
+================================================================================
+
+Right Eye (OD):
+--------------
+- Optic Disc: Normal, cup-to-disc ratio 0.3
+- Macula: Normal, no edema or drusen
+- Retinal Vessels: Normal caliber and course
+- Peripheral Retina: Intact, no tears or detachments
+- Vitreous: Clear
+
+Left Eye (OS):
+-------------
+- Optic Disc: Normal, cup-to-disc ratio 0.3
+- Macula: Normal, no abnormalities
+- Retinal Vessels: Normal
+- Peripheral Retina: Intact
+- Vitreous: Clear
+
+================================================================================
+                    COLOR VISION TEST
+================================================================================
+
+Ishihara Color Test: Passed (Normal color vision)
+
+================================================================================
+                    DIAGNOSIS
+================================================================================
+
+1. Myopia (Nearsightedness) - Bilateral
+   - Right Eye: -1.50 D
+   - Left Eye: -2.00 D
+   - Status: Stable with slight progression
+
+2. Astigmatism - Bilateral
+   - Right Eye: -0.75 D @ 90°
+   - Left Eye: -0.50 D @ 180°
+
+3. Mild Dry Eye Syndrome - Bilateral
+   - Recommendation: Use artificial tears as needed
+
+================================================================================
+                    RECOMMENDATIONS
+================================================================================
+
+1. Prescription Update:
+   - New glasses prescription provided
+   - Recommended to update current eyeglasses
+
+2. Follow-up:
+   - Next eye examination: September 15, 2024 (6 months)
+   - Earlier if experiencing vision changes or eye discomfort
+
+3. Eye Care:
+   - Use artificial tears 2-3 times daily for dry eye relief
+   - Take regular breaks when using digital devices (20-20-20 rule)
+   - Wear UV-protective sunglasses when outdoors
+   - Maintain good lighting when reading or working
+
+4. Lifestyle:
+   - Maintain healthy diet rich in vitamins A, C, and E
+   - Stay hydrated
+   - Avoid rubbing eyes
+
+================================================================================
+                    PRESCRIPTION
+================================================================================
+
+Eyeglasses Prescription:
+----------------------
+Right Eye (OD):
+  Sphere: -1.50 D
+  Cylinder: -0.75 D
+  Axis: 90°
+  Add: None
+
+Left Eye (OS):
+  Sphere: -2.00 D
+  Cylinder: -0.50 D
+  Axis: 180°
+  Add: None
+
+PD (Pupillary Distance): 62 mm
+
+Prescription Valid Until: September 15, 2024
+
+================================================================================
+                    ADDITIONAL NOTES
+================================================================================
+
+- Patient reports occasional eye strain after prolonged computer use
+- No history of eye injuries or surgeries
+- Family history: Mother has myopia
+- Patient advised to maintain regular eye examinations
+- All findings within normal limits except for refractive errors
+
+================================================================================
+                    SIGNATURE
+================================================================================
+
+Dr. Sarah Johnson, MD
+Ophthalmologist
+License #: OPTH-12345
+Date: March 15, 2024
+
+Clinic Contact:
+Vision Care Center
+123 Medical Plaza, Suite 200
+Phone: (555) 123-4567
+Email: info@visioncarecenter.com
+
+================================================================================
+                    END OF REPORT
+================================================================================

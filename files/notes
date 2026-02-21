@@ -1,0 +1,128 @@
+### Problem Statement Updates:
+1. **Critical emergency cases** - Need immediate access to medical history in critical situations where time is of the essence
+2. **Insurance integration** - Integrate insurance details to help people get financial relief and manage coverage
+
+### Motivation Updates:
+1. **Rapid medical care** - Enable faster access to medical information
+2. **Reduce manual work** - Automate document submission and retrieval processes
+3. **Emergency document access** - Quick access to medical documents during emergencies
+
+### Application/Features to Add:
+
+1. **Health Notifications & Monitoring**
+   - Notify users about health-related insights based on their reports
+   - Examples: diet plan recommendations, heart rate monitoring, screen time alerts, etc.
+
+2. **Interactive Community Page**
+   - Create an interaction page where medical patients can get accurate information about diseases and have conversations
+   - Privacy features:
+     - Only verified persons can participate
+     - Users can choose to reveal identity or remain anonymous
+
+3. **Doctor & Hospital Recommendations**
+   - Provide comprehensive doctor list and hospital names using LLM
+   - Recommend best-suited hospitals based on past medical history
+
+4. **Medical Search Engine & Personal Assistant**
+   - Enhanced medical summarization and intelligent suggestions
+   - Act as a comprehensive medical search engine and personal assistant
+
+### UI/UX Considerations:
+
+1. **Dual View System**
+   - **View 1: Self Profile** - Personal view for the individual user
+   - **View 2: Emergency/Hospital View** - Accessible by hospitals or authorized persons in emergency situations
+     - Medical history available after proper authentication
+     - Designed for quick access during critical situations
+
+
+
+
+
+Phase-Wise Implementation Plan - MediVault
+
+## Overview
+
+This document outlines the phased approach to building MediVault, from MVP to full-scale deployment with all features.
+
+---
+
+## Phase 1: MVP - Core Foundation (Months 1-3)
+
+### Objectives
+- Build core document storage and retrieval system
+- Implement basic RAG pipeline
+- Create essential user interface
+- Establish security and privacy foundation
+
+### Features
+
+#### 1.1 User Management
+- User registration and authentication
+- Basic profile management
+- Password reset functionality
+- Email verification
+
+#### 1.2 Document Management
+- PDF document upload
+- Basic text extraction from PDFs
+- Document storage (local/cloud)
+- Document listing and viewing
+- Document deletion
+
+#### 1.3 Basic RAG Pipeline
+- Document chunking (size-based)
+- Embedding generation (sentence-transformers)
+- Vector database setup (ChromaDB/Pinecone)
+- Basic semantic search
+- Simple Q&A functionality
+
+#### 1.4 Core UI
+- Self Profile View (basic)
+- Document upload interface
+- Query interface
+- Response display with basic citations
+
+#### 1.5 Security & Privacy
+- Basic encryption at rest
+- HTTPS/TLS
+- JWT authentication
+- User data isolation
+
+### Technology Stack
+- **Frontend**: React/Next.js (basic)
+- **Backend**: Python FastAPI
+- **Database**: PostgreSQL
+- **Vector DB**: ChromaDB (local) or Pinecone (cloud)
+- **Embeddings**: sentence-transformers
+- **LLM**: OpenAI API (GPT-3.5/4)
+
+### Success Metrics
+- Users can upload and store documents
+- Basic Q&A works with citations
+- Response time < 3 seconds
+- 95% document processing success rate
+
+### Deliverables
+- Working MVP application
+- Basic documentation
+- Deployment on single server/cloud instance
+
+---
+
+
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent" \
+  -H 'Content-Type: application/json' \
+  -H 'X-goog-api-key: AIzaSyC8XenDsMPliH7rl-7vre6XaculTP5YiJ8' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'

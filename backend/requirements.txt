@@ -1,0 +1,18 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic>=2.9.0
+
+# Google Gemini (using requests for direct API calls)
+requests==2.31.0
+
+# RAG Dependencies
+# Vector Database (FAISS - Python 3.14 compatible)
+faiss-cpu>=1.7.4
+
+# Embedding Model (updated for compatibility with newer huggingface_hub)
+sentence-transformers>=2.7.0
+
+# Numerical computing (dependency for embeddings)
+numpy>=1.24.0

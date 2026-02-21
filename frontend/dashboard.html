@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediVault - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            color: #667eea;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .logout-btn {
+            background: #dc3545;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>MediVault</h1>
+            <p>Your Personal Health Record Vault</p>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="welcome-message">
+                Welcome to MediVault Dashboard!
+            </div>
+            <p style="color: #666; font-size: 16px; margin-bottom: 30px;">
+                This is your dashboard. More features will be added here.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="/chatbot" style="background: #667eea; color: white; padding: 12px 30px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block;">
+                    💬 Ask Medical Assistant
+                </a>
+                <a href="/" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
